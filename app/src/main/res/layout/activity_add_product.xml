@@ -1,0 +1,16 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp" android:background="#F7F2EB" android:fillViewport="true">
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="24dp" app:cardElevation="8dp" app:cardUseCompatPadding="true" android:backgroundTint="@android:color/white">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <EditText android:id="@+id/edtProductName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="نام محصول" android:inputType="text"/>
+            <EditText android:id="@+id/edtProductPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="قیمت" android:inputType="number" android:layout_marginTop="10dp"/>
+            <EditText android:id="@+id/edtProductDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="توضیحات" android:inputType="textMultiLine" android:minLines="3" android:layout_marginTop="10dp"/>
+            <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@android:drawable/btn_dropdown"/>
+            <!--  Image Preview  -->
+            <androidx.cardview.widget.CardView android:layout_width="140dp" android:layout_height="140dp" android:layout_gravity="center" android:layout_marginTop="18dp" app:cardCornerRadius="16dp" app:cardElevation="4dp">
+                <ImageView android:id="@+id/imgProduct" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside" android:padding="16dp" android:src="@drawable/ic_placeholder_image"/>
+            </androidx.cardview.widget.CardView>
+            <Button android:id="@+id/btnSelectImage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="انتخاب تصویر محصول" android:layout_marginTop="16dp" android:textColor="#FFFFFF" android:backgroundTint="#D4AF37"/>
+            <Button android:id="@+id/btnAddProduct" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="افزودن محصول" android:layout_marginTop="12dp" android:textColor="#FFFFFF" android:backgroundTint="#D4AF37"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

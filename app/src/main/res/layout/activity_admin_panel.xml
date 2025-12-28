@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F2EEE8">
+    <!--  Toolbar  -->
+    <androidx.appcompat.widget.Toolbar android:id="@+id/adminToolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="#F7F2EB" android:elevation="4dp" android:padding="16dp">
+        <TextView android:text="Admin Panel" android:textSize="20sp" android:textStyle="bold" android:textColor="#3E3A36" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+    <!--  RecyclerView محصولات  -->
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerProducts" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="72dp" android:padding="16dp"/>
+    <!--  دکمه افزودن محصول  -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Product"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:backgroundTint="#C9A24D"
+        app:tint="@android:color/white"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/showAllBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:contentDescription="show Product"
+        app:srcCompat="@drawable/home_logo"
+        app:backgroundTint="#C9A24D"
+        app:tint="@android:color/white"/>
+</RelativeLayout>

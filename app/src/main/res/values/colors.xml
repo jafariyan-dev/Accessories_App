@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="darkGray">#616161</color>
+    <color name="brown">#7e4616</color>
+    <color name="darkbrown">#201b18</color>
+    <color name="brown2">#564742</color>
+    <color name="brown3">#3d2c21</color>
+    <color name="lightBrown">#3d2c21</color>
+    <color name="purple">#7b33f0</color>
+    <color name="orange">#f69724</color>
+    <color name="gold_light">#E6D3A3</color>
+    <!--  طلایی روشن  -->
+    <color name="gold_dark">#B89B5E</color>
+    <!--  طلایی تیره  -->
+    <color name="text_primary">#3A2F1C</color>
+    <!--  متن اول(عنوان)  -->
+    <color name="text_secondary">#7A6A4F</color>
+    <!--  متن دوم(توضیحات)  -->
+    <color name="input_bg">#FDFBF7</color>
+    <!--  زمینه edittext  -->
+    <color name="stroke_soft">#D8C9A5</color>
+    <!--  دورخط edittext  -->
+    <color name="glass_bg">#CCFFFFFF</color>
+    <!--  زمینه سفید شفاف  -->
+    <color name="shadow_soft">#33000000</color>
+    <color name="text_hint">#9D9D9D</color>
+    <!--  متن راهنما  -->
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_23sdp"
+        android:background="@drawable/glass_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_19sdp">
+
+
+        <!-- عنوان -->
+        <TextView
+            android:text="@string/logintxt"
+            android:textSize="26sp"
+            android:fontFamily="@font/edameh"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- توضیح -->
+        <TextView
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/loginOrSignup"
+            android:textSize="13sp"
+            android:fontFamily="@font/digi_rastin"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- دکمه‌های ثبت نام / ورود -->
+        <LinearLayout
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_35sdp"
+                android:id="@+id/SignupBtn"
+                android:layout_weight="1"
+                android:text="@string/signuptxt"
+                android:textSize="15sp"
+                android:fontFamily="@font/digi_rastin"
+                android:backgroundTint="@color/button_state"
+                android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <!-- نام کاربری -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:hint="@string/Usernametxt"
+            android:textColorHint="@color/text_hint"
+            android:fontFamily="@font/digi_rastin"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:textDirection="ltr"
+            android:padding="@dimen/_9sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="LabelFor" />
+
+        <!-- رمز عبور -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:hint="@string/passwordHint"
+            android:textColorHint="@color/text_hint"
+            android:fontFamily="@font/digi_rastin"
+            android:inputType="textPassword"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:textDirection="ltr"
+            android:padding="@dimen/_9sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- دکمه ادامه -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:text="@string/confirm"
+            android:textSize="18sp"
+            android:fontFamily="@font/digi_rastin"
+            android:backgroundTint="@color/button_state"
+            android:textColor="@color/text_primary"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

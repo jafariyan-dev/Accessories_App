@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  وقتی دکمه کلیک شده  -->
+    <item android:color="#B89B5E" android:state_pressed="true"/>
+    <!--  وقتی انتخاب شده  -->
+    <item android:color="#7A6A4F" android:state_selected="true"/>
+    <!--  حالت عادی  -->
+    <item android:color="#E6D3A3"/>
+</selector>

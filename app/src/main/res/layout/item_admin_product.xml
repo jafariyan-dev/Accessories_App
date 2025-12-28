@@ -1,0 +1,13 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" app:cardCornerRadius="16dp" app:cardElevation="4dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="12dp">
+        <ImageView android:id="@+id/imgProduct" android:layout_width="70dp" android:layout_height="70dp" android:scaleType="centerCrop" android:src="@drawable/ic_placeholder_image"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+            <TextView android:id="@+id/txtProductName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Product Name" android:textSize="16sp" android:textStyle="bold" android:textColor="#3E3A36"/>
+            <TextView android:id="@+id/txtProductPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1,200,000 تومان" android:textColor="#3E3A36"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+            <ImageButton android:id="@+id/btnEdit" android:layout_width="36dp" android:layout_height="36dp" android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_edit"/>
+            <ImageButton android:id="@+id/btnDelete" android:layout_width="36dp" android:layout_height="36dp" android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_delete" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

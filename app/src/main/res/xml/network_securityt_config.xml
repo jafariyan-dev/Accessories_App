@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        This configuration is for DEVELOPMENT ONLY.
+        It allows the app to connect to your local WAMP server via HTTP.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- Add your computer's local IP address here -->
+        <domain includeSubdomains="true">10.147.104.48</domain>
+
+        <!--
+            It's also good practice to include 'localhost' for any local
+            testing that might happen directly on the emulator itself.
+        -->
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+
+    <!--
+        By default, all other domains will still be forced to use HTTPS,
+        which is good for security.
+    -->
+    <base-config cleartextTrafficPermitted="false" />
+
+</network-security-config>
