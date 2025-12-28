@@ -32,7 +32,7 @@
     <string name="confirm">Confirm</string>
     <string name="customertxt">User</string>
     <string name="admintxt">Admin</string>
-    <string name="Usernametxt">:Username</string>
+    <string name="Usernametxt">Username:</string>
     <string name="signupDesc">Please fill in the fileds and remember them.</string>
     <string name="show_all_product">show all product</string>
 </resources>

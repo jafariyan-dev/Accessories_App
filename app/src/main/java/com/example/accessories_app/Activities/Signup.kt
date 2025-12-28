@@ -24,10 +24,12 @@ class Signup : AppCompatActivity() {
         var IsAdmin: Boolean
         setContentView(binding.root)
         binding.apply {
+            IsAdmin=false
             btnSignup.setOnClickListener {
                 var Username = username
                 var Password = password
-                IsAdmin = radioAdmin.isChecked
+                if(radioAdmin.isChecked) IsAdmin = true
+
                 val request = UserRequest( User(Username.text.toString(),Password.text.toString(), IsAdmin))
                 Api().instance().regCall(request)
                     .enqueue(object : Callback<DBResponse> {

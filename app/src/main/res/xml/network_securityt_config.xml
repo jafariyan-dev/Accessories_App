@@ -6,7 +6,7 @@
     -->
     <domain-config cleartextTrafficPermitted="true">
         <!-- Add your computer's local IP address here -->
-        <domain includeSubdomains="true">10.147.104.48</domain>
+        <domain includeSubdomains="true">10.178.79.48</domain>
 
         <!--
             It's also good practice to include 'localhost' for any local

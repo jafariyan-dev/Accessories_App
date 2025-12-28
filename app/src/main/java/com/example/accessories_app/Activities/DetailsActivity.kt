@@ -52,7 +52,7 @@ class DetailsActivity : AppCompatActivity() {
     private fun bundle() {
         binding.apply {
             item = intent.getSerializableExtra("object") as Product
-            val videoUrl = "http://192.168.1.106/" + item.VideoUrl
+            val videoUrl = "http://10.178.79.48/" + item.VideoUrl
             Glide.with(this@DetailsActivity)
                 .load(videoUrl)
                 .into( binding.VideoMain)

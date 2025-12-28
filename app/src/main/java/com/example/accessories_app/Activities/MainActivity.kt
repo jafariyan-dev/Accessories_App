@@ -52,8 +52,8 @@ class MainActivity : AppCompatActivity() {
                                             LinearLayoutManager.HORIZONTAL,
                                             false
                                         )
-                                        PopularView.adapter =
-                                            PopularAdaptors(items = productList)
+//                                        PopularView.adapter =
+//                                            PopularAdaptors(items = productList)
                                         progressBarPopular.visibility = View.GONE
 
                                     }

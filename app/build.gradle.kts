@@ -49,24 +49,18 @@ android {
 
 dependencies {
     implementation (libs.retrofit)
-    implementation (libs.com.squareup.retrofit2.converter.scalars5)
     implementation (libs.com.squareup.okhttp3.okhttp4)
     implementation (libs.androidx.cardview)
     implementation (libs.androidx.exifinterface)
     implementation (libs.android.gif.drawable)
     implementation (libs.sdp.android)
     implementation (libs.converter.gson.v290)
-    // کتابخانه‌ها
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
-    // Firebase Database
-    implementation(libs.firebase.database.v2021)
-    implementation(libs.firebase.database.ktx.v2021)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

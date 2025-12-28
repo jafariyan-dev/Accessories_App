@@ -13,9 +13,6 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.animation.with
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.accessories_app.Domain.CategoryModel
 import com.example.accessories_app.Domain.Product
@@ -25,7 +22,6 @@ import com.example.accessories_app.RequestAndResponse.DBResponse
 import com.example.accessories_app.RequestAndResponse.PhotoUploadResponse
 import com.example.accessories_app.RequestAndResponse.ProductRequest
 import com.example.accessories_app.databinding.ActivityAddProductBinding
-import com.google.android.gms.common.api.Api
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

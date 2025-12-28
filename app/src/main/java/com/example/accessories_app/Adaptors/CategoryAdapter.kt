@@ -13,7 +13,6 @@ import com.example.accessories_app.Activities.ItemsListActivity
 import com.example.accessories_app.Domain.CategoryModel
 import com.example.accessories_app.R
 import com.example.accessories_app.databinding.ViewholderCategoryBinding
-import com.google.firebase.database.Transaction
 
 class CategoryAdapter(
     val items: MutableList<CategoryModel>
