@@ -27,10 +27,10 @@ class ItemsListActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         getBundles()
-        loadCategory()
+        loadProductCategory()
 
     }//end
-    private fun loadCategory(){
+    private fun loadProductCategory(){
         binding.apply {
             progressBar.visibility=View.VISIBLE
             var request = ProductWithCategoryRequest(id.toInt())

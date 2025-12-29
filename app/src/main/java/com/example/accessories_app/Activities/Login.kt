@@ -57,7 +57,7 @@ class Login : AppCompatActivity() {
                             else {
                                 val errorBody = response.errorBody()?.string()
                                 Toast.makeText(this@Login, "Server Error: ${response.code()}", Toast.LENGTH_LONG).show()
-                                Log.e("SIGNUP_FAIL", "HTTP Error Code: ${response.code()}. Body: $errorBody")
+                                Log.e("LOGIN_FAIL", "HTTP Error Code: ${response.code()}. Body: $errorBody")
                             }
                         }
                         override fun onFailure(call: Call<LoginResponse>, t: Throwable) {

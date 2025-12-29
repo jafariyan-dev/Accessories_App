@@ -52,14 +52,6 @@ public class TinyDB {
     }
 
     // --- Utility ---
-    public void remove(String key) {
-        preferences.edit().remove(key).apply();
-    }
-
-    public void clear() {
-        preferences.edit().clear().apply();
-    }
-
     private void checkForNullKey(String key) {
         if (key == null) {
             throw new NullPointerException();

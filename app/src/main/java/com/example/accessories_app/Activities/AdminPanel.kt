@@ -33,7 +33,6 @@ class AdminPanel : AppCompatActivity() {
     private var categoryList = ArrayList<CategoryModel>()
 
     // لانچر برای افزودن محصول جدید
-
     private val addProductLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             Toast.makeText(this, "محصول جدید با موفقیت اضافه شد. در حال بارگذاری مجدد لیست...", Toast.LENGTH_SHORT).show()
@@ -92,7 +91,7 @@ class AdminPanel : AppCompatActivity() {
         adapter = ProductAdapter(
             productList,
             categoryList
-        ) { callback -> // categoryList را به constructor اضافه کنید
+        ) { callback ->
             imageCallback = callback
             imagePicker.launch("image/*")
             binding.recyclerProducts.layoutManager = LinearLayoutManager(this)

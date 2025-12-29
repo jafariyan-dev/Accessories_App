@@ -53,8 +53,7 @@ interface ApiInterface {
 
     @Multipart
     @POST("uploadPhoto.php")
-    fun uploadPhoto(
-        @Part image: MultipartBody.Part
+    fun uploadPhoto(@Part image: MultipartBody.Part
     ): Call<PhotoUploadResponse>
 
 

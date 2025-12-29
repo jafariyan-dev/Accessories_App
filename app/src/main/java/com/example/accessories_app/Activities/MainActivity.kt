@@ -52,10 +52,8 @@ class MainActivity : AppCompatActivity() {
                                             LinearLayoutManager.HORIZONTAL,
                                             false
                                         )
-//                                        PopularView.adapter =
-//                                            PopularAdaptors(items = productList)
+                                        PopularView.adapter = PopularAdaptors(productList)
                                         progressBarPopular.visibility = View.GONE
-
                                     }
                                 }
                             }
@@ -95,6 +93,12 @@ class MainActivity : AppCompatActivity() {
     private fun initBottomMenu() {
         binding.CartBtn.setOnClickListener {
             startActivity(Intent(this,CartActivity::class.java))
+        }
+        binding.AboutUs.setOnClickListener{
+            startActivity(Intent(this@MainActivity, About_Us::class.java))
+        }
+        binding.ContactUs.setOnClickListener{
+            startActivity(Intent(this@MainActivity, Contact_Us::class.java))
         }
     }
     private fun loadCategory(){

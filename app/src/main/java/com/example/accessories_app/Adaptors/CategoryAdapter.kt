@@ -13,9 +13,10 @@ import com.example.accessories_app.Activities.ItemsListActivity
 import com.example.accessories_app.Domain.CategoryModel
 import com.example.accessories_app.R
 import com.example.accessories_app.databinding.ViewholderCategoryBinding
+import java.lang.reflect.Array
 
 class CategoryAdapter(
-    val items: MutableList<CategoryModel>
+    val items: ArrayList<CategoryModel>
 ) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
     private lateinit var context: Context
@@ -48,11 +49,11 @@ class CategoryAdapter(
             notifyItemChanged(selectedPosition)
 
             Handler(Looper.getMainLooper()).postDelayed({
-                val intent=Intent(context,ItemsListActivity::class.java).apply {
-                   putExtra("Title",item.Title)
-                   putExtra("Id",item.Id.toString())
+                val intent = Intent(context, ItemsListActivity::class.java).apply {
+                    putExtra("Title", item.Title)
+                    putExtra("Id", item.Id.toString())
                 }
-                ContextCompat.startActivity(context,intent,null)
+                ContextCompat.startActivity(context, intent, null)
             }, 500)
         }
 
@@ -60,9 +61,8 @@ class CategoryAdapter(
             holder.binding.titleCat.setBackgroundResource(R.drawable.brown_full_corner_bg)
         } else {
             holder.binding.titleCat.setBackgroundResource(R.drawable.brown_2_full_corner)
-             }
+        }
     }
 
     override fun getItemCount(): Int = items.size
 }
-

@@ -10,7 +10,7 @@ import com.example.accessories_app.Activities.DetailsActivity
 import com.example.accessories_app.Domain.Product
 import com.example.accessories_app.databinding.ViewholderPopularBinding
 
-class ItemsListCategoryAdapters(val items: MutableList<Product>) :
+class ItemsListCategoryAdapters(val items: ArrayList<Product>) :
     RecyclerView.Adapter<ItemsListCategoryAdapters.ViewHolder>() {
     lateinit var context:Context
 
@@ -27,7 +27,7 @@ class ItemsListCategoryAdapters(val items: MutableList<Product>) :
         holder.binding.PriceTxt.text = "$" + items[position].Price.toString()
 
         Glide.with(context)
-            .load(items[position].PhotoUrl[0])
+            .load(items[position].PhotoUrl)
             .into(holder.binding.Pic)
 
         holder.itemView.setOnClickListener {

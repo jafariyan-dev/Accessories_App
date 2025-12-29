@@ -1,19 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:background="#F7F2EB">
     <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="20dp" app:cardElevation="6dp" app:cardUseCompatPadding="true" android:backgroundTint="@android:color/white">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-            <!--  Product Name  -->
+            <!--   Product Name   -->
             <EditText android:id="@+id/edtProductName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="نام محصول" android:inputType="text" android:background="@android:drawable/edit_text" android:padding="12dp"/>
-            <!--  Price  -->
+            <!--   Price   -->
             <EditText android:id="@+id/edtProductPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="قیمت (تومان)" android:inputType="number" android:layout_marginTop="10dp" android:padding="12dp"/>
-            <!--  Description  -->
+            <!--   Description   -->
             <EditText android:id="@+id/edtProductDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="توضیحات محصول" android:inputType="textMultiLine" android:minLines="3" android:layout_marginTop="10dp" android:padding="12dp"/>
-            <!--  Category  -->
+            <!--   Category   -->
             <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@android:drawable/btn_dropdown"/>
-            <!--  Image Preview  -->
+            <!--   Image Preview   -->
             <androidx.cardview.widget.CardView android:layout_width="130dp" android:layout_height="130dp" android:layout_gravity="center" android:layout_marginTop="18dp" app:cardCornerRadius="16dp" app:cardElevation="4dp">
                 <ImageView android:id="@+id/imgProduct" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_placeholder_image" android:scaleType="centerInside" android:padding="14dp"/>
             </androidx.cardview.widget.CardView>
-            <!--  Select Image Button  -->
+            <!--   Select Image Button   -->
             <Button android:id="@+id/btnSelectImage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="انتخاب تصویر محصول" android:layout_marginTop="16dp" android:textColor="#FFFFFF" android:backgroundTint="#D4AF37"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -39,7 +39,7 @@ class AddProduct : AppCompatActivity() {
             }
         }
     private lateinit var categorySpinner: Spinner
-    private var categoryList = mutableListOf<CategoryModel>()
+    private var categoryList = ArrayList<CategoryModel>()
     private var selectedCategoryId: Int = -1
     private var uploadedPhotoUrl: String? = null
 
@@ -78,8 +78,6 @@ class AddProduct : AppCompatActivity() {
             }
 
             val product = Product(0,name,description,uploadedPhotoUrl.toString(),"", price,0 , selectedCategoryId)
-            val intent = Intent()
-            intent.putExtra("new_product", product)
             setResult(Activity.RESULT_OK)
             saveProductToDatabase(product)
             finish()
@@ -136,30 +134,30 @@ class AddProduct : AppCompatActivity() {
                         if (simpleResponse != null) {
                             if (simpleResponse.IsSuccess) {
                                 Toast.makeText(
-                                    applicationContext,
+                                    this@AddProduct,
                                     "Product saved to database!",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             } else {
                                 Log.d("ADD_PRODUCT", "Data is valid. Creating request object.")
                                 Toast.makeText(
-                                    applicationContext, "API Error: ${simpleResponse?.Message}", Toast.LENGTH_LONG).show()
+                                    this@AddProduct, "API Error: ${simpleResponse?.Message}", Toast.LENGTH_LONG).show()
                             }
                         }
                         else {
                             Log.d("ADD_PRODUCT", "Data is valid. Creating request object.")
                             Toast.makeText(
-                                applicationContext, "Empty Response: ${simpleResponse?.Message}", Toast.LENGTH_LONG).show()
+                                this@AddProduct, "Empty Response: ${simpleResponse?.Message}", Toast.LENGTH_LONG).show()
                         }
                     } else {
                         Log.d("ADD_PRODUCT", "Data is valid. Creating request object.")
-                        Toast.makeText(applicationContext, "Server Error: ${response.code()}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@AddProduct, "Server Error: ${response.code()}", Toast.LENGTH_LONG).show()
                     }
                 }
 
                 override fun onFailure(call: Call<DBResponse>, t: Throwable) {
                     Log.d("ADD_PRODUCT", "Data is valid. Creating request object.")
-                    Toast.makeText(applicationContext, "Network Failure: ${t.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@AddProduct, "Network Failure: ${t.message}", Toast.LENGTH_LONG).show()
                 }
             })
     }

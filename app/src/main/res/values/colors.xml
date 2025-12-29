@@ -27,4 +27,5 @@
     <color name="shadow_soft">#33000000</color>
     <color name="text_hint">#9D9D9D</color>
     <!--  متن راهنما  -->
+    <color name="darbare">#f2ceb8</color>
 </resources>

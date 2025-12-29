@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_about_us" tools:context=".About_Us">
+    <View android:id="@+id/blur_overlay" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#AA897979"/>
+    <!--  WebView  -->
+    <WebView android:id="@+id/myWebView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+    <!--  About Us Card  -->
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/_245sdp" android:layout_marginHorizontal="@dimen/_12sdp">
+        <androidx.cardview.widget.CardView android:id="@+id/myCardView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/_16sdp" app:cardCornerRadius="18dp" app:cardElevation="8dp" app:cardBackgroundColor="@color/darbare">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/txtaboutus" android:gravity="center" android:fontFamily="@font/kalam_regular" android:textSize="18sp" android:lineSpacingExtra="6dp" android:textColor="#3A2A1F" android:padding="@dimen/_14sdp"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <!--  Social Icons  -->
+    <androidx.cardview.widget.CardView android:id="@+id/google" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/_40sdp" android:layout_marginTop="@dimen/_200sdp" app:cardCornerRadius="12dp" app:cardElevation="10dp">
+        <ImageView android:id="@+id/googleImg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:clickable="true" android:focusable="true" android:src="@drawable/google" tools:ignore="TouchTargetSizeCheck"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/whatsapp" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/_90sdp" android:layout_marginTop="@dimen/_200sdp" app:cardCornerRadius="12dp" app:cardElevation="10dp">
+        <ImageView android:id="@+id/whatsappImg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:clickable="true" android:focusable="true" android:src="@drawable/whatsapp" tools:ignore="TouchTargetSizeCheck"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/instagram" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/_140sdp" android:layout_marginTop="@dimen/_200sdp" app:cardCornerRadius="12dp" app:cardElevation="10dp">
+        <ImageView android:id="@+id/instagramImg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:clickable="true" android:focusable="true" android:src="@drawable/instagram" tools:ignore="TouchTargetSizeCheck"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/threads" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/_190sdp" android:layout_marginTop="@dimen/_200sdp" app:cardCornerRadius="12dp" app:cardElevation="10dp">
+        <ImageView android:id="@+id/threadsImg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:clickable="true" android:focusable="true" android:src="@drawable/threads" tools:ignore="TouchTargetSizeCheck"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/telegram" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="@dimen/_240sdp" android:layout_marginTop="@dimen/_200sdp" app:cardCornerRadius="12dp" app:cardElevation="10dp">
+        <ImageView android:id="@+id/telegramImg" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_gravity="center" android:clickable="true" android:focusable="true" android:src="@drawable/telegram" tools:ignore="TouchTargetSizeCheck"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

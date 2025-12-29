@@ -1,263 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/darkbrown"
-    tools:context=".Activities.ItemsListActivity">
-
-    <!-- Scroll -->
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomSection">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Header -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="32dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="@string/cart"
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="48dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/back"
-                    app:tint="@color/white" />
-
-                <TextView
-                    android:id="@+id/BackBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:text="@string/back"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/gold_dark" tools:context=".Activities.ItemsListActivity">
+    <!--  Scroll  -->
+    <ScrollView android:id="@+id/scrollView2" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/bottomSection">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <!--  Header  -->
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="32dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48dp" android:text="@string/cart" android:textColor="@color/text_primary" android:textSize="22sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                <ImageView android:id="@+id/imageView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginTop="48dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/back" app:tint="@color/text_primary"/>
+                <TextView android:id="@+id/BackBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:text="@string/back" android:textColor="@color/text_primary" app:layout_constraintBottom_toBottomOf="@+id/imageView5" app:layout_constraintStart_toEndOf="@+id/imageView5" app:layout_constraintTop_toTopOf="@+id/imageView5"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- RecyclerView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/listView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="100dp" />
-
-            <!-- Promo code box -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="32dp"
-                android:background="@drawable/brown_2_full_corner"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <EditText
-                    android:id="@+id/editTextText2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:background="@android:color/transparent"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="14sp"
-                    android:paddingStart="16dp"
-                    android:hint="@string/enter" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button"
-                    style="@style/Widget.AppCompat.Button"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/brown_full_corner_bg"
-                    android:text="@string/apply"
-                    android:textSize="18sp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp" />
+            <!--  RecyclerView  -->
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/listView" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="100dp"/>
+            <!--  Promo code box  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:layout_margin="32dp" android:background="@drawable/back_stroke" android:orientation="horizontal" android:gravity="center_vertical">
+                <EditText android:id="@+id/editTextText2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:ems="10" android:inputType="text" android:background="@color/glass_bg" android:textColor="@color/white" android:textColorHint="@color/text_secondary" android:textSize="14sp" android:paddingStart="16dp" android:hint="@string/enter"/>
+                <androidx.appcompat.widget.AppCompatButton android:id="@+id/button" style="@style/Widget.AppCompat.Button" android:layout_width="100dp" android:layout_height="40dp" android:background="@drawable/brown_full_corner_bg" android:text="@string/apply" android:textSize="18sp" android:textColor="@color/text_primary" android:textStyle="bold" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
-
-    <!-- Bottom section -->
-    <LinearLayout
-        android:id="@+id/bottomSection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/brown_half_corner"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <!-- Price container -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp">
-
-            <!-- Guideline -->
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/priceGuide"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.78" />
-
-            <!-- Subtotal -->
-            <TextView
-                android:id="@+id/textSubtotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Subtotal"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/TotalFeetTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="$0"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/priceGuide"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- Delivery -->
-            <TextView
-                android:id="@+id/textDelivery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/delivery"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textSubtotal" />
-
-            <TextView
-                android:id="@+id/DeliveryTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="$0"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/priceGuide"
-                app:layout_constraintTop_toBottomOf="@id/TotalFeetTxt" />
-
-            <!-- Total Tax -->
-            <TextView
-                android:id="@+id/textTotalTax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/total_tax"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textDelivery" />
-
-            <TextView
-                android:id="@+id/TotalTaxTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="$0"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/priceGuide"
-                app:layout_constraintTop_toBottomOf="@id/DeliveryTxt" />
-
-            <!-- Divider -->
-            <View
-                android:id="@+id/view3"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/white"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textTotalTax" />
-
-            <!-- Final Total -->
-            <TextView
-                android:id="@+id/FinalTotalLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Final Total"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view3" />
-
-            <TextView
-                android:id="@+id/FinalTotalTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="$0"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/priceGuide"
-                app:layout_constraintTop_toBottomOf="@id/view3" />
-
+    <!--  Bottom section  -->
+    <LinearLayout android:id="@+id/bottomSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/glass_card" android:orientation="vertical" app:layout_constraintBottom_toBottomOf="parent">
+        <!--  Price container  -->
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp">
+            <!--  Guideline  -->
+            <androidx.constraintlayout.widget.Guideline android:id="@+id/priceGuide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" app:layout_constraintGuide_percent="0.78"/>
+            <!--  Subtotal  -->
+            <TextView android:id="@+id/textSubtotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subtotal" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+            <TextView android:id="@+id/TotalFeetTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0" android:textColor="@color/text_secondary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="@id/priceGuide" app:layout_constraintTop_toTopOf="parent"/>
+            <!--  Delivery  -->
+            <TextView android:id="@+id/textDelivery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/delivery" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textSubtotal"/>
+            <TextView android:id="@+id/DeliveryTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="$0" android:textColor="@color/text_secondary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="@id/priceGuide" app:layout_constraintTop_toBottomOf="@id/TotalFeetTxt"/>
+            <!--  Total Tax  -->
+            <TextView android:id="@+id/textTotalTax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/total_tax" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textDelivery"/>
+            <TextView android:id="@+id/TotalTaxTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="$0" android:textColor="@color/text_secondary" android:textSize="14sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="@id/priceGuide" app:layout_constraintTop_toBottomOf="@id/DeliveryTxt"/>
+            <!--  Divider  -->
+            <View android:id="@+id/view3" android:layout_width="0dp" android:layout_height="1dp" android:layout_marginTop="24dp" android:background="@color/text_primary" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/textTotalTax"/>
+            <!--  Final Total  -->
+            <TextView android:id="@+id/FinalTotalLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Final Total" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/view3"/>
+            <TextView android:id="@+id/FinalTotalTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="$0" android:textColor="@color/text_secondary" android:textSize="16sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="@id/priceGuide" app:layout_constraintTop_toBottomOf="@id/view3"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- Checkout Button -->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/proccedBtn"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/brown_full_corner_bg"
-            android:text="@string/procced_to_checkout"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
+        <!--  Checkout Button  -->
+        <androidx.appcompat.widget.AppCompatButton android:id="@+id/proccedBtn" style="@style/Widget.AppCompat.Button" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginStart="32dp" android:layout_marginEnd="32dp" android:background="@drawable/brown_full_corner_bg" android:text="@string/procced_to_checkout" android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

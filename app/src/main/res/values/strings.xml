@@ -7,9 +7,9 @@
     <string name="see_all">See all</string>
     <string name="popular">Popular</string>
     <string name="category">Category</string>
-    <string name="explorer">Explorer</string>
+    <string name="Contact_Us">Contact Us</string>
     <string name="cart">Cart</string>
-    <string name="favorite">Favorite</string>
+    <string name="about_us">About Us</string>
     <string name="orders">Orders</string>
     <string name="profile">Profile</string>
     <string name="list">List</string>
@@ -35,4 +35,14 @@
     <string name="Usernametxt">Username:</string>
     <string name="signupDesc">Please fill in the fileds and remember them.</string>
     <string name="show_all_product">show all product</string>
+    <string name="txtaboutus">Welcome to our jewelry store, where elegance meets craftsmanship. Each piece is carefully designed using high-quality materials and precise attention to detail, creating timeless beauty. Thank you for choosing us to be part of your precious moments. </string>
+    <string name="contactus">Contact Us</string>
+    <string name="exit">Exit</string>
+    <string name="Share">Share</string>
+    <string name="subject">Subject:</string>
+    <string name="email">Email:</string>
+    <string name="message">Message:</string>
+    <string name="sendmessage">Send Message</string>
+    <string name="mobile">Mobile:</string>
+    <string name="name">Name:</string>
 </resources>

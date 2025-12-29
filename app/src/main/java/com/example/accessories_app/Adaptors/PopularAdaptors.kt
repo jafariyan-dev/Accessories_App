@@ -34,9 +34,8 @@ class PopularAdaptors(val items: ArrayList<Product>) :
         holder.binding.PriceTxt.text = "$" + currentItem.Price
         holder.binding.SubtitelTxt.text = currentItem.Description
         val context = holder.itemView.context
-        val picUrl = "http://10.178.79.48/" + currentItem.PhotoUrl
         Glide.with(context)
-            .load(picUrl)
+            .load(currentItem.PhotoUrl)
             .into(holder.binding.Pic)
         val intent = Intent(context, DetailsActivity::class.java)
         intent.putExtra("object", items[position])

@@ -52,9 +52,8 @@ class DetailsActivity : AppCompatActivity() {
     private fun bundle() {
         binding.apply {
             item = intent.getSerializableExtra("object") as Product
-            val videoUrl = "http://10.178.79.48/" + item.VideoUrl
             Glide.with(this@DetailsActivity)
-                .load(videoUrl)
+                .load(item.VideoUrl)
                 .into( binding.VideoMain)
 
             titelTxt.text = item.Title

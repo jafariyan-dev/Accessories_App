@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.Contact_Us"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.About_Us"
+            android:exported="false" />
+        <activity
             android:name=".Activities.AddProduct"
             android:exported="false" />
         <activity
@@ -38,10 +44,10 @@
             android:name=".Activities.ItemsListActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.Spalsh_Screen"
+            android:name=".Activities.Login"
             android:exported="false" />
         <activity
-            android:name=".Activities.Login"
+            android:name=".Activities.Spalsh_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

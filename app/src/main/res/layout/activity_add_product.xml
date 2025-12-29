@@ -5,7 +5,7 @@
             <EditText android:id="@+id/edtProductPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="قیمت" android:inputType="number" android:layout_marginTop="10dp"/>
             <EditText android:id="@+id/edtProductDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="توضیحات" android:inputType="textMultiLine" android:minLines="3" android:layout_marginTop="10dp"/>
             <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:background="@android:drawable/btn_dropdown"/>
-            <!--  Image Preview  -->
+            <!--   Image Preview   -->
             <androidx.cardview.widget.CardView android:layout_width="140dp" android:layout_height="140dp" android:layout_gravity="center" android:layout_marginTop="18dp" app:cardCornerRadius="16dp" app:cardElevation="4dp">
                 <ImageView android:id="@+id/imgProduct" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside" android:padding="16dp" android:src="@drawable/ic_placeholder_image"/>
             </androidx.cardview.widget.CardView>
