@@ -21,12 +21,10 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    lateinit var shared: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding=ActivityMainBinding.inflate(layoutInflater)
-        shared = getSharedPreferences("ProductStorage", MODE_PRIVATE)
         setContentView(binding.root)
         loadCategory()
         loadProduct()

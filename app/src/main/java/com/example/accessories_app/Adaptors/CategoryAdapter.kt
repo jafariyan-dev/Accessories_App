@@ -36,11 +36,10 @@ class CategoryAdapter(
         return ViewHolder(binding)
     }
 
-    // درست نوشتن نوع holder
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        val context = holder.itemView.context
         val item = items[position]
         holder.binding.titleCat.text = item.Title
-
         holder.binding.root.setOnClickListener {
             lastSelectedPosition = selectedPosition
             selectedPosition = position
@@ -49,11 +48,10 @@ class CategoryAdapter(
             notifyItemChanged(selectedPosition)
 
             Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(context, ItemsListActivity::class.java).apply {
-                    putExtra("Title", item.Title)
-                    putExtra("Id", item.Id.toString())
-                }
-                ContextCompat.startActivity(context, intent, null)
+                val intent = Intent(context, ItemsListActivity::class.java)
+                intent.putExtra("Title", item.Title)
+                intent.putExtra("Id", item.Id.toString())
+                context.startActivity(intent)
             }, 500)
         }
 

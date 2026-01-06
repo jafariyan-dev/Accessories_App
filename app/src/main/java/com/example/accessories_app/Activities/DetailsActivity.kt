@@ -20,7 +20,6 @@ class DetailsActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         managmentCart = ManagmentCart(context = this)
         bundle()
         initSizeList()

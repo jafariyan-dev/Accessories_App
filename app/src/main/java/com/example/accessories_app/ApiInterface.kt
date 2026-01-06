@@ -69,7 +69,6 @@ interface ApiInterface {
 
     @FormUrlEncoded
     @POST("deleteProduct.php")
-    fun deleteProduct(
-        @Field("Id") productId: Int
+    fun deleteProduct(@Field("Id") productId: Int
     ): Call<DBResponse>
 }
