@@ -29,7 +29,7 @@ class ItemsListActivity : AppCompatActivity() {
         getBundles()
         loadProductCategory()
 
-    }//end
+    }
     private fun loadProductCategory(){
         binding.apply {
             progressBar.visibility=View.VISIBLE

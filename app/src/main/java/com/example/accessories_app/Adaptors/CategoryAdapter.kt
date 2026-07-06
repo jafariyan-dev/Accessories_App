@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.view.ViewGroup
-import androidx.compose.animation.core.Transition
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.accessories_app.Activities.ItemsListActivity

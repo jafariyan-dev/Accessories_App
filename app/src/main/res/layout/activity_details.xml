@@ -29,6 +29,11 @@
             </LinearLayout>
             <TextView android:id="@+id/textView19" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/description" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginStart="16dp" android:layout_marginTop="32dp"/>
             <TextView android:id="@+id/DescriptionTxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Text" android:textColor="@color/text_primary" android:layout_marginHorizontal="16dp" android:layout_marginVertical="8dp"/>
+            <Button
+                android:id="@+id/tryOnBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Try On" />
             <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp">
                 <TextView android:id="@+id/AddtochartBtn" android:layout_width="190dp" android:layout_height="50dp" android:background="@drawable/brown_full_corner_bg" android:text="@string/add_to_cart" android:gravity="center" android:textColor="@color/white" android:textStyle="bold" android:textSize="18sp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
                 <TextView android:id="@+id/priceTxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0" android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/AddtochartBtn" app:layout_constraintTop_toTopOf="parent"/>

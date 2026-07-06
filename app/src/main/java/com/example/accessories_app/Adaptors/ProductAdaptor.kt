@@ -120,7 +120,13 @@ class ProductAdapter(
         edtDescription.setText(product.Description)
 
         Glide.with(context).load(product.PhotoUrl).into(imgProduct)
-        imgProduct.tag = product.PhotoUrl
+        val imageTag = imgProduct.tag
+
+        product.PhotoUrl = when (imageTag) {
+            is Uri -> imageTag.toString()
+            is String -> imageTag
+            else -> product.PhotoUrl
+        }
         val categoryTitles = categories.map { it.Title }
 
         val spinnerAdapter = ArrayAdapter(
@@ -156,7 +162,12 @@ class ProductAdapter(
                 product.Title = edtName.text.toString()
                 product.Price = edtPrice.text.toString().toInt()
                 product.Description = edtDescription.text.toString()
-                product.PhotoUrl = (imgProduct.tag as? Uri).toString()
+
+                product.PhotoUrl = when (imageTag) {
+                    is Uri -> imageTag.toString()
+                    is String -> imageTag
+                    else -> product.PhotoUrl
+                }
                 val selectedPosition = spinnerCategory.selectedItemPosition
                 val newCategoryId =
                     if (selectedPosition >= 0 && selectedPosition < categories.size) {

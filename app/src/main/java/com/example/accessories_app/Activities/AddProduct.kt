@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.webkit.MimeTypeMap
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -25,6 +26,7 @@ import com.example.accessories_app.databinding.ActivityAddProductBinding
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -61,7 +63,7 @@ class AddProduct : AppCompatActivity() {
             val description = binding.edtProductDescription.text.toString()
 
             if (selectedCategoryId == -1) {
-                Toast.makeText(this, "Please select a category.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "لطفا یک دسته بندی انتخاب کنید.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -71,7 +73,7 @@ class AddProduct : AppCompatActivity() {
             }
 
             if (priceStr.isBlank()) {
-                Toast.makeText(this, "Price cannot be empty.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "قیمت نمی تواند خالی باشد.", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else {
                price = priceStr.toInt()
@@ -85,6 +87,7 @@ class AddProduct : AppCompatActivity() {
     }
     private fun uploadPhotoToServer(imageUri: Uri) {
         Toast.makeText(this, "در حال آپلود تصویر...", Toast.LENGTH_SHORT).show()
+
         val inputStream = contentResolver.openInputStream(imageUri)
         val fileBytes = inputStream?.readBytes()
         inputStream?.close()
@@ -93,8 +96,23 @@ class AddProduct : AppCompatActivity() {
             Toast.makeText(this, "نمی‌توان تصویر را خواند", Toast.LENGTH_SHORT).show()
             return
         }
-        val requestFile = RequestBody.create("image/jpeg".toMediaTypeOrNull(), fileBytes)
-        val body = MultipartBody.Part.createFormData("image", "photo.jpg", requestFile)
+
+        val mimeType = contentResolver.getType(imageUri) ?: "image/png"
+
+        val extension = MimeTypeMap.getSingleton()
+            .getExtensionFromMimeType(mimeType) ?: "png"
+
+        val fileName = "product_${System.currentTimeMillis()}.$extension"
+
+        val requestFile = fileBytes.toRequestBody(
+            mimeType.toMediaTypeOrNull()
+        )
+
+        val body = MultipartBody.Part.createFormData(
+            "image",
+            fileName,
+            requestFile
+        )
         com.example.accessories_app.Api().instance().uploadPhoto(body).enqueue(object : Callback<PhotoUploadResponse> {
             override fun onResponse(call: Call<PhotoUploadResponse>, response: Response<PhotoUploadResponse>) {
                 if (response.isSuccessful) {

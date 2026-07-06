@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.size
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.accessories_app.Adaptors.ProductAdapter
 import com.example.accessories_app.Api

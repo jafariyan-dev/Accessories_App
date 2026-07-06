@@ -1,6 +1,7 @@
 package com.example.accessories_app.Activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,13 @@ class DetailsActivity : AppCompatActivity() {
         managmentCart = ManagmentCart(context = this)
         bundle()
         initSizeList()
+        val product = intent.getSerializableExtra("object") as Product
+
+        binding.tryOnBtn.setOnClickListener {
+            val intent = Intent(this, GlassesActivity::class.java)
+            intent.putExtra("product", product)
+            startActivity(intent)
+        }
     }
 
     private fun initSizeList() {

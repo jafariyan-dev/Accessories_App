@@ -44,6 +44,8 @@ googleServices = "4.4.4"
 googleGmsGoogleServices = "4.4.4"
 firebaseDatabase = "22.0.1"
 firebaseDatabaseKtx = "22.0.1"
+tasksVision = "0.10.14"
+tasksVisionVersion = "0.10.35"
 
 [libraries]
 android-gif-drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
@@ -93,6 +95,8 @@ sdp-android-v110 = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAn
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+tasks-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "tasksVision" }
+tasks-vision-v01035 = { module = "com.google.mediapipe:tasks-vision", version.ref = "tasksVisionVersion" }
 ui = { module = "androidx.compose.ui:ui" }
 ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }

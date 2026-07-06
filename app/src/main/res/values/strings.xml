@@ -45,4 +45,7 @@
     <string name="sendmessage">Send Message</string>
     <string name="mobile">Mobile:</string>
     <string name="name">Name:</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="accessory_size">Accessory Size</string>
+    <string name="choose_photo">Choose Photo</string>
 </resources>

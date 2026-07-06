@@ -5,14 +5,11 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.compose.animation.with
-import androidx.compose.ui.semantics.text
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.accessories_app.Activities.DetailsActivity
 import com.example.accessories_app.Domain.Product
 import com.example.accessories_app.databinding.ViewholderPopularBinding
-import kotlin.io.path.name
 
 class PopularAdaptors(val items: ArrayList<Product>) :
     RecyclerView.Adapter<PopularAdaptors.ViewHolder>() {

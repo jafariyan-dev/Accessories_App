@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.gms.google-services")
 //    alias(libs.plugins.google.gms.google.services)
     }
 
@@ -21,12 +20,8 @@ android {
 
     buildFeatures {
         viewBinding = true
-        compose = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.3"
-    }
 
     buildTypes {
         release {
@@ -65,11 +60,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.glide.v4160)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.ui)
-    implementation(libs.material3)
-    implementation(libs.ui.tooling.preview)
-    debugImplementation(libs.ui.tooling)
     implementation(libs.androidx.savedstate.ktx)
     implementation(libs.androidx.lifecycle.common.java8)
+    implementation(libs.tasks.vision)
 }
