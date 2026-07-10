@@ -1,0 +1,63 @@
+package com.example.accessories_app.adaptors
+import android.annotation.SuppressLint
+import android.view.LayoutInflater
+import android.content.Context
+import android.content.Intent
+import android.os.Handler
+import android.os.Looper
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.accessories_app.activities.ItemsListActivity
+import com.example.accessories_app.domain.CategoryModel
+import com.example.accessories_app.R
+import com.example.accessories_app.databinding.ViewholderCategoryBinding
+
+class CategoryAdapter(
+    val items: ArrayList<CategoryModel>
+) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+
+    private lateinit var context: Context
+    private var selectedPosition = -1
+    private var lastSelectedPosition = -1
+
+    inner class ViewHolder(val binding: ViewholderCategoryBinding) :
+        RecyclerView.ViewHolder(binding.root)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        context = parent.context
+        val binding = ViewholderCategoryBinding.inflate(
+            LayoutInflater.from(context),
+            parent,
+            false
+        )
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        val context = holder.itemView.context
+        val item = items[position]
+        holder.binding.titleCat.text = item.Title
+        holder.binding.root.setOnClickListener {
+            lastSelectedPosition = selectedPosition
+            selectedPosition = position
+
+            notifyItemChanged(lastSelectedPosition)
+            notifyItemChanged(selectedPosition)
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                val intent = Intent(context, ItemsListActivity::class.java)
+                intent.putExtra("Title", item.Title)
+                intent.putExtra("Id", item.Id.toString())
+                context.startActivity(intent)
+            }, 500)
+        }
+
+        if (selectedPosition == position) {
+            holder.binding.titleCat.setBackgroundResource(R.drawable.brown_full_corner_bg)
+        } else {
+            holder.binding.titleCat.setBackgroundResource(R.drawable.brown_2_full_corner)
+        }
+    }
+
+    override fun getItemCount(): Int = items.size
+}

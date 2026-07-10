@@ -69,6 +69,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <!-- عنوان TOTAL -->

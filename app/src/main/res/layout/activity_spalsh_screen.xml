@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Activities.Spalsh_Screen">
+    tools:context=".activities.Spalsh_Screen">
 
    <pl.droidsonroids.gif.GifImageView
        android:layout_width="match_parent"

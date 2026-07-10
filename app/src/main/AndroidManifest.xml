@@ -17,40 +17,40 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.GlassesActivity"
+            android:name=".activities.GlassesActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.Contact_Us"
+            android:name=".activities.Contact_Us"
             android:exported="false" />
         <activity
-            android:name=".Activities.About_Us"
+            android:name=".activities.About_Us"
             android:exported="false" />
         <activity
-            android:name=".Activities.AddProduct"
+            android:name=".activities.AddProduct"
             android:exported="false" />
         <activity
-            android:name=".Activities.AdminPanel"
+            android:name=".activities.AdminPanel"
             android:exported="false" />
         <activity
-            android:name=".Activities.Signup"
+            android:name=".activities.Signup"
             android:exported="false" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.CartActivity"
+            android:name=".activities.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.DetailsActivity"
+            android:name=".activities.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.ItemsListActivity"
+            android:name=".activities.ItemsListActivity"
             android:exported="false" />
         <activity
-            android:name=".Activities.Login"
+            android:name=".activities.Login"
             android:exported="false" />
         <activity
-            android:name=".Activities.Spalsh_Screen"
+            android:name=".activities.Spalsh_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
