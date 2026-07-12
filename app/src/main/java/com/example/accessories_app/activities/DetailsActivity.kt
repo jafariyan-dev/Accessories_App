@@ -67,7 +67,7 @@ class DetailsActivity : AppCompatActivity() {
             DescriptionTxt.text = item.Description
             priceTxt.text = "$" + item.Price
 
-            AddtochartBtn.setOnClickListener {
+            AddtocartBtn.setOnClickListener {
                 item.numberInCart = Integer.valueOf(NumberCart.text.toString())
                 managmentCart.insertItems(item)
             }

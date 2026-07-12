@@ -2,6 +2,7 @@ package com.example.accessories_app.helper
 
 import android.content.Context
 import android.widget.Toast
+import com.example.accessories_app.R
 import com.example.accessories_app.activities.ChangeNumberItemsListener
 import com.example.accessories_app.domain.Product
 
@@ -19,7 +20,7 @@ class ManagmentCart(val context: Context) {
             listItem.add(item)
         }
         tinyDB.putListObject("CartList", listItem)
-        Toast.makeText(context, "Added to your Cart", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, context.getString(R.string.added_to_cart), Toast.LENGTH_SHORT).show()
     }
 
     fun getListCart(): ArrayList<Product> {

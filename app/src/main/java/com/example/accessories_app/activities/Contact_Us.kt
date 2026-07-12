@@ -6,6 +6,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.accessories_app.R
 import com.example.accessories_app.databinding.ActivityContactUsBinding
 
 class Contact_Us : AppCompatActivity() {
@@ -23,7 +24,7 @@ class Contact_Us : AppCompatActivity() {
             if (validateForm()) {
                 Toast.makeText(
                     this,
-                    "Your message has been successfully sent. Thank you! ✨",
+                    getString(R.string.your_message_has_send),
                     Toast.LENGTH_LONG
                 ).show()
                 // اگر می‌خواهید بعد از ارسال به صفحه اصلی برگردید:

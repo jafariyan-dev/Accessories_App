@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.accessories_app.Api
+import com.example.accessories_app.R
 import com.example.accessories_app.requestAndResponse.DBResponse
 import com.example.accessories_app.domain.User
 import com.example.accessories_app.requestAndResponse.UserRequest
@@ -42,7 +43,8 @@ class Signup : AppCompatActivity() {
 
                                 if (signupResponse != null) {
                                     if (signupResponse.IsSuccess) {
-                                        Toast.makeText(this@Signup, "ثبت نام با موفقیت انجام شد", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(this@Signup,
+                                            getString(R.string.signup_success), Toast.LENGTH_LONG).show()
                                     } else {
                                         val errorMessage = signupResponse.Message ?: "An unknown error occurred."
                                         Toast.makeText(this@Signup, "Error: $errorMessage", Toast.LENGTH_LONG).show()

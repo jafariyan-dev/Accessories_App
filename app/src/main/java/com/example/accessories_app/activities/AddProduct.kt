@@ -83,14 +83,14 @@ class AddProduct : AppCompatActivity() {
         }
     }
     private fun uploadPhotoToServer(imageUri: Uri) {
-        Toast.makeText(this, "در حال آپلود تصویر...", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.uploading_photo), Toast.LENGTH_SHORT).show()
 
         val inputStream = contentResolver.openInputStream(imageUri)
         val fileBytes = inputStream?.readBytes()
         inputStream?.close()
 
         if (fileBytes == null) {
-            Toast.makeText(this, "نمی‌توان تصویر را خواند", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.cant_read_photo), Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -116,7 +116,8 @@ class AddProduct : AppCompatActivity() {
                     val uploadResponse = response.body()
                     if (uploadResponse != null && uploadResponse.IsSuccess) {
                         uploadedPhotoUrl = uploadResponse.Url
-                        Toast.makeText(this@AddProduct, "تصویر با موفقیت آپلود شد", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@AddProduct,
+                            getString(R.string.upload_success), Toast.LENGTH_SHORT).show()
                         Glide.with(this@AddProduct)
                             .load(uploadedPhotoUrl)
                             .into(binding.imgProduct)
@@ -150,7 +151,7 @@ class AddProduct : AppCompatActivity() {
                             if (simpleResponse.IsSuccess) {
                                 Toast.makeText(
                                     this@AddProduct,
-                                    "Product saved to database!",
+                                    getString(R.string.product_saved_to_database),
                                     Toast.LENGTH_SHORT
                                 ).show()
                             } else {

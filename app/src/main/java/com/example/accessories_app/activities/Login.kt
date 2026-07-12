@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.accessories_app.Api
+import com.example.accessories_app.R
 import com.example.accessories_app.requestAndResponse.LoginRequest
 import com.example.accessories_app.requestAndResponse.LoginResponse
 import com.example.accessories_app.databinding.ActivityLoginBinding
@@ -43,7 +44,8 @@ class Login : AppCompatActivity() {
                                         } else
                                             startActivity(Intent(this@Login, MainActivity::class.java))
 
-                                        Toast.makeText(this@Login, "ورود با موفقیت انجام شد", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(this@Login,
+                                            getString(R.string.login_success), Toast.LENGTH_LONG).show()
                                     } else {
                                         val errorMessage = loginResponse.Message
                                         Toast.makeText(this@Login, "Error: $errorMessage", Toast.LENGTH_LONG).show()

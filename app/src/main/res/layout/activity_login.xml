@@ -22,7 +22,7 @@
 
         <!-- عنوان -->
         <TextView
-            android:text="@string/logintxt"
+            android:text="@string/login"
             android:textSize="26sp"
             android:fontFamily="@font/edameh"
             android:textColor="@color/text_primary"
@@ -33,7 +33,7 @@
         <!-- توضیح -->
         <TextView
             android:layout_marginTop="@dimen/_3sdp"
-            android:text="@string/loginOrSignup"
+            android:text="@string/login_or_signup"
             android:textSize="13sp"
             android:fontFamily="@font/digi_rastin"
             android:textColor="@color/text_secondary"
@@ -52,7 +52,7 @@
                 android:layout_height="@dimen/_35sdp"
                 android:id="@+id/SignupBtn"
                 android:layout_weight="1"
-                android:text="@string/signuptxt"
+                android:text="@string/signup"
                 android:textSize="15sp"
                 android:fontFamily="@font/digi_rastin"
                 android:backgroundTint="@color/button_state"
@@ -63,7 +63,7 @@
         <EditText
             android:id="@+id/username"
             android:layout_marginTop="@dimen/_23sdp"
-            android:hint="@string/Usernametxt"
+            android:hint="@string/username"
             android:textColorHint="@color/text_hint"
             android:fontFamily="@font/digi_rastin"
             android:textAlignment="viewStart"
@@ -78,7 +78,7 @@
         <EditText
             android:id="@+id/password"
             android:layout_marginTop="@dimen/_11sdp"
-            android:hint="@string/passwordHint"
+            android:hint="@string/password"
             android:textColorHint="@color/text_hint"
             android:fontFamily="@font/digi_rastin"
             android:inputType="textPassword"
@@ -94,7 +94,7 @@
             android:id="@+id/btnLogin"
             android:layout_marginTop="@dimen/_23sdp"
             android:layout_height="@dimen/_39sdp"
-            android:text="@string/confirm"
+            android:text="@string/login"
             android:textSize="18sp"
             android:fontFamily="@font/digi_rastin"
             android:backgroundTint="@color/button_state"

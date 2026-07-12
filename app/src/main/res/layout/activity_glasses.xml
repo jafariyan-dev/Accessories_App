@@ -39,12 +39,13 @@
             android:id="@+id/pickButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose Photo"/>
+            android:text="@string/choose_photo"
+            android:backgroundTint="@color/brown"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Accessory Size"
+            android:text="@string/accessory_size"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_marginTop="12dp"/>

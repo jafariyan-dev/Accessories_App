@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Accessories Store</string>
+
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="about_us">About Us</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="cart">Cart</string>
+    <string name="categories">Categories</string>
+    <string name="products">Products</string>
+    <string name="product_details">Product details</string>
+    <string name="login_or_signup">Don\'t have an account? Signup here</string>
+    <string name="search">Search</string>
+    <string name="orders">Orders</string>
+    <string name="signupDesc">Please fill in the fileds and remember them.</string>
+
+    <string name="add_to_cart">Add to cart</string>
+    <string name="try_on">Virtual try-on</string>
+    <string name="select_photo">Select photo</string>
+    <string name="change_size">Change size</string>
+
+    <string name="face_not_detected">No face was detected in the image</string>
+    <string name="hand_not_detected">No hand was detected in the image</string>
+    <string name="face_detection_error">Face detection failed</string>
+    <string name="hand_detection_error">Hand detection failed</string>
+
+    <string name="language">Language</string>
+    <string name="select_language">Select language</string>
+    <string name="system_language">Device language</string>
+    <string name="persian">فارسی</string>
+    <string name="english">English</string>
+
+    <string name="product_not_selected">No product was selected</string>
+    <string name="network_error">Network connection failed</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="back">back</string>
+    <string name="enter">Enter</string>
+    <string name="apply">Apply</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery">Delivery</string>
+    <string name="tax">Tax</string>
+    <string name="_0">$0</string>
+    <string name="final_total">Final Total</string>
+    <string name="procced_to_checkout">Proceed to checkout</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
+    <string name="subject">Subject</string>
+    <string name="text">Text</string>
+    <string name="send_message">Send</string>
+    <string name="title">Title</string>
+    <string name="size">Size</string>
+    <string name="qty">Qty</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="description">Description</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="accessory_size">Accessory Size</string>
+    <string name="see_all">See all</string>
+    <string name="customer">Customer</string>
+    <string name="admin">Admin</string>
+    <string name="price">Price</string>
+    <string name="txtaboutus">Welcome to our jewelry store, where elegance meets craftsmanship. Each piece is carefully designed using high-quality materials and precise attention to detail, creating timeless beauty. Thank you for choosing us to be part of your precious moments. </string>
+    <string name="added_to_cart">Added to cart</string>
+    <string name="login_success">ورود با موفقیت انجام شد</string>
+    <string name="product_saved_to_database">Product saved to database!</string>
+    <string name="uploading_photo">در حال آپلود تصویر...</string>
+    <string name="cant_read_photo">نمی‌توان تصویر را خواند</string>
+    <string name="upload_success">تصویر با موفقیت آپلود شد</string>
+    <string name="your_message_has_send">Your message has been successfully sent. Thank you! ✨</string>
+    <string name="signup_success">ثبت نام با موفقیت انجام شد</string>
+
+</resources>
