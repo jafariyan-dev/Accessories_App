@@ -78,5 +78,12 @@
     <string name="upload_success">تصویر با موفقیت آپلود شد</string>
     <string name="your_message_has_send">پیام شما با موفقیت ارسال شد ممنونیم! ✨</string>
     <string name="signup_success">ثبت نام با موفقیت انجام شد</string>
+    <string name="glamoure_accessory">Glamour Accessory</string>
+    <string name="pose_not_detected">
+    بدن یا شانه‌ها در تصویر تشخیص داده نشد
+</string>
 
+    <string name="pose_detection_error">
+    خطا در تشخیص محل گردن
+</string>
 </resources>

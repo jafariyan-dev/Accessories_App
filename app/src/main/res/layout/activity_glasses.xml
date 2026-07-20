@@ -27,6 +27,26 @@
             android:layout_height="160dp"
             android:scaleType="fitCenter"
             android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/leftEarringView"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:elevation="10dp"
+            android:contentDescription="@null" />
+
+        <ImageView
+            android:id="@+id/rightEarringView"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            android:elevation="10dp"
+            android:contentDescription="@null" />
     </FrameLayout>
 
     <LinearLayout

@@ -77,5 +77,12 @@
     <string name="upload_success">تصویر با موفقیت آپلود شد</string>
     <string name="your_message_has_send">Your message has been successfully sent. Thank you! ✨</string>
     <string name="signup_success">ثبت نام با موفقیت انجام شد</string>
+    <string name="glamoure_accessory">Glamoure Accessory</string>
+    <string name="pose_not_detected">
+    Body or shoulders were not detected in the image
+</string>
 
+    <string name="pose_detection_error">
+    Failed to detect the neck position
+</string>
 </resources>
