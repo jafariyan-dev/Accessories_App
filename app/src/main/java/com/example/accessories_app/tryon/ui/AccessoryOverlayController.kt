@@ -155,8 +155,10 @@ class AccessoryOverlayController(
                 transform.anchorY -
                         view.height / 2f
 
-            view.rotation = transform.rotation
+            view.rotationX = 0f
             view.rotationY = 0f
+
+            view.rotation = transform.rotation
 
             applyScale()
         }

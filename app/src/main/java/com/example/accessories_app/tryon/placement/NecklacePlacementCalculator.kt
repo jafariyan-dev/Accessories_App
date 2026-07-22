@@ -77,12 +77,26 @@ class NecklacePlacementCalculator {
             neckBaseY +
                     shoulderWidth * NECKLACE_DOWN_OFFSET_RATIO
 
-        val shoulderAngle = Math.toDegrees(
+        val screenLeftShoulder: PointF
+        val screenRightShoulder: PointF
+
+        if (leftShoulder.x < rightShoulder.x) {
+            screenLeftShoulder = leftShoulder
+            screenRightShoulder = rightShoulder
+        } else {
+            screenLeftShoulder = rightShoulder
+            screenRightShoulder = leftShoulder
+        }
+
+        val rawShoulderAngle = Math.toDegrees(
             atan2(
-                rightShoulder.y - leftShoulder.y,
-                rightShoulder.x - leftShoulder.x
+                screenRightShoulder.y - screenLeftShoulder.y,
+                screenRightShoulder.x - screenLeftShoulder.x
             ).toDouble()
         ).toFloat()
+
+        val shoulderAngle =
+            normalizeOverlayAngle(rawShoulderAngle)
 
         val necklaceWidth =
             shoulderWidth * NECKLACE_WIDTH_RATIO
@@ -101,6 +115,15 @@ class NecklacePlacementCalculator {
         amount: Float
     ): Float {
         return start + (end - start) * amount
+    }
+    private fun normalizeOverlayAngle(
+        angle: Float
+    ): Float {
+        return when {
+            angle > 90f -> angle - 180f
+            angle < -90f -> angle + 180f
+            else -> angle
+        }
     }
 
     private companion object {
@@ -125,7 +148,7 @@ class NecklacePlacementCalculator {
         /*
          * عرض گردنبند نسبت به عرض شانه‌ها.
          */
-        const val NECKLACE_WIDTH_RATIO = 0.52f
+        const val NECKLACE_WIDTH_RATIO = 0.30f
 
         const val MIN_SHOULDER_WIDTH_PX = 30f
     }
