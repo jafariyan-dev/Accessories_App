@@ -19,10 +19,10 @@ class EarringPlacementCalculator {
         private const val LEFT_EYE = 33
         private const val RIGHT_EYE = 263
 
-        private const val JAW_INTERPOLATION = 0.68f
-        private const val OUTWARD_OFFSET_RATIO = 0.035f
-        private const val VERTICAL_OFFSET_RATIO = 0.015f
-        private const val EARRING_WIDTH_RATIO = 0.18f
+        private const val JAW_INTERPOLATION = 0.30f
+        private const val OUTWARD_OFFSET_RATIO = 0.025f
+        private const val VERTICAL_OFFSET_RATIO = -0.005f
+        private const val EARRING_WIDTH_RATIO = 0.15f
         private const val ROTATION_RATIO = 0.15f
     }
 

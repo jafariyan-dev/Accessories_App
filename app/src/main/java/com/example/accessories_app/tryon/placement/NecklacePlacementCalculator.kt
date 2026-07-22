@@ -148,7 +148,7 @@ class NecklacePlacementCalculator {
         /*
          * عرض گردنبند نسبت به عرض شانه‌ها.
          */
-        const val NECKLACE_WIDTH_RATIO = 0.30f
+        const val NECKLACE_WIDTH_RATIO = 0.60f
 
         const val MIN_SHOULDER_WIDTH_PX = 30f
     }
